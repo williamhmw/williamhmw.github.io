@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-          cache-dependency-path: ''./some/path/package-lock.json'
+          cache-dependency-path: './some/path/package-lock.json'
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
