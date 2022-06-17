@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwilliamhmw_github_io=self.webpackChunkwilliamhmw_github_io||[]).push([[3342],{2840:function(a){a.exports=JSON.parse('{"label":"comandos","permalink":"/blog/tags/comandos","allTagsPath":"/blog/tags","count":1}')}}]);

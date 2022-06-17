@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwilliamhmw_github_io=self.webpackChunkwilliamhmw_github_io||[]).push([[2524],{3859:function(s){s.exports=JSON.parse('{"label":"estudos","permalink":"/blog/tags/estudos","allTagsPath":"/blog/tags","count":1}')}}]);
