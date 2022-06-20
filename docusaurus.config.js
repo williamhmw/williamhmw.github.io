@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'William Honorio',
+  tagline: 'Aprendendo programação',
   url: 'https://williamhmw.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -121,7 +121,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} William Honorio, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
