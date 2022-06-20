@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwilliamhmw_github_io=self.webpackChunkwilliamhmw_github_io||[]).push([[6141],{6576:function(a){a.exports=JSON.parse('{"label":"aplica\xe7\xe3o","permalink":"/blog/tags/aplicacao","allTagsPath":"/blog/tags","count":1}')}}]);
