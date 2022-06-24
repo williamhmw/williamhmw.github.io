@@ -42,6 +42,44 @@ Se sim `taskCounterText` receberá o valor `'tarefa'`, senão, receberá o valor
 
 Dessa fomra o resultado dessa verificação ja é armazenado diretamente na variável, e declarada no campo `<Text>`
 
+### Adicionando alterações para o label `TextInput` 
+
+Quando realizamos alguma ação no campo de texto podemos passar algumas ações, como por exemplo escrever algo no campo de texto, ou clicar no botão de enviar, ou OK no teclado do device.
+
+No exemplo abaixo são três campos que serã adicionados informações.
+
+```ts showLineNumbers title="/src/components/TodoInput.tsx"
+return (
+    <View style={styles.inputContainer}>
+      <TextInput 
+        style={styles.input} 
+        placeholder="Adicionar novo todo..."
+        placeholderTextColor="#B2B2B2"
+        returnKeyType="send"
+        selectionColor="#666666"
+        // highlight-star
+        value={task}
+        onChangeText={setTask}
+        onSubmitEditing = {handleAddNewTask}
+        // highlight-end
+      />
+      <TouchableOpacity
+        testID="add-new-task-button"
+        activeOpacity={0.7}
+        style={styles.addButton}
+        onPress={handleAddNewTask}
+      >
+        <Icon name="chevron-right" size={24} color="#B2B2B2" />
+      </TouchableOpacity>
+    </View>
+  )
+```
+O campo `value={task}` recebe um valor, que pode ser alguma informação ou variável, nesse caso estamos recebendo a informação da variável `task`, isso quer dizer que o valor desse `<TextInput>` será a task que estamos inserindo.
+
+O campo `onChangeText={setTask}` recebe a váriavel `setTask`, que é utilizada para alterar o `estado` da variável `task`, isso é necessário para manter a imutabilidade do `useState`. Ou seja, o `onChangeText` vai armazenar todo o texto que estiver sendo escrito na varial setTask, que depois será passada para a variável task, e posteriormente será o `value` do `TextInput`.
+
+O Campo `onSubmitEditing` é acionado quando o botão de OK do teclado do device é pressionado, ou o botão do `<TouchableOpacity>`. Esse evento deve chamar uma função que será acionada ao apertar o botão, no caso da aplicação, deverá chamar a função `handleAddNewTask`, responsável por adicionar uma nova Task.
+
 ### Exibição de alertas 
 
 Ao tentar adicionar um To-do com o mesmo nome, aparecerá um alerta no device informando que ja esta cadastrado.

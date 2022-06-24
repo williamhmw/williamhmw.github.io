@@ -33,17 +33,17 @@ Esses comandos são para executar o Docosaurus, plataforma de documenação e bl
 :::
 
 Executar o `Build` para gerar os arquivos estáticos que vão para o GitHub Pages
-```git showLineNumbers title="Iniciar build"
+```bash showLineNumbers title="Iniciar build"
 npm run build
 ```
 
 Executar o `Serve` para iniciar no servidor local localhost.
-```git showLineNumbers title="Iniciar servidor local"
+```bash showLineNumbers title="Iniciar servidor local"
 npm run build
 ```
 
 Executar o `GIT_USER` para iniciar o deploy no GitHub Pages.
-```git showLineNumbers title="Iniciar deploy"
+```bash showLineNumbers title="Iniciar deploy"
 GIT_USER=<GITHUB_USERNAME> yarn deploy
 ```
 
@@ -51,7 +51,7 @@ No caso trocar o `<GITHUB_USERNAME>` pelo nome configurado no terminal.
 
 Se for executar pelo terminal do PowerShell deve ser inserido o código abaixo.
 
-```git showLineNumbers title="Iniciar deploy pelo Poweshell"
+```bash showLineNumbers title="Iniciar deploy pelo Poweshell"
 cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
 ```
 
