@@ -23,7 +23,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.21"
+    "@docusaurus/module-type-aliases": "2.0.0-beta.21",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "browserslist": {
     "production": [
