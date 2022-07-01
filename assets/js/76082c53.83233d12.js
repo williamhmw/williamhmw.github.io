@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwilliamhmw_github_io=self.webpackChunkwilliamhmw_github_io||[]).push([[762],{5872:function(l){l.exports=JSON.parse('{"permalink":"/blog/tags/mobile","page":1,"postsPerPage":10,"totalPages":1,"totalCount":6,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
