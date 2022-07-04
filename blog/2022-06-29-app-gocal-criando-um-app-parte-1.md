@@ -1,8 +1,8 @@
 ---
-slug: passo-a-passo-to-do
-title: Criando o App goCal
+slug: app-gocal-criando-um-app-parte-1
+title: App goCal - Criando um App - Parte 1
 authors: william
-tags: [mobile, react native, JSX, state, props, to-do, aplicação, app]
+tags: [mobile, react native, aplicação, app]
 ---
 
 > Um guia com o passo a passo de como criar uma aplicação em React Native, explicando a lógica das funções, arquivos e decisões.
@@ -12,7 +12,7 @@ tags: [mobile, react native, JSX, state, props, to-do, aplicação, app]
 <!--truncate-->
 ### Iniciando um novo projeto em React Native  
 
-No VS Code abrimos u novo terminal e iniciamos com o comando abaixo.
+No VS Code abrimos um novo terminal e iniciamos com o comando abaixo.
 
 ```bash title="Criar novo projeto"
 npx react-native init AppGoCal
@@ -74,7 +74,6 @@ Nele colocaremos o seguinte código
 import React from 'react';
 import { View, Text } from 'react-native';
 
-
 export function Home() {
   return (
     <View>
@@ -134,4 +133,95 @@ Nos componentes que desejamos passar um estilo, basta colocar no formato do cód
         </Text>
     </View>
 ```
-### Adicionando
+### Adicionando TextInput
+
+Vamos acresentar o TextInput na aplicação e depois fazer as estilizações por último.
+
+```js title="./src/pages/Home.js"
+import { StyleSheet, View, Text, TextInput } from 'react-native';
+```
+
+Quando for acrescentado um componente core do React Native é necessário fazer a importação como no código acima.
+
+Depois vamos adicionar o campo do TextInput e passar algumas propriedades para ele.
+
+```js showLineNumbers title="./src/pages/Home.js"
+export function Home() {
+  return (
+    <View style={styles.container}>
+        <Text style={styles.title}>
+                Para começar como podemos te chamar?
+        </Text>
+        <TextInput
+            style={styles.input}
+            placeholder="Digite o seu nome"
+        />
+    </View>
+  )
+};
+```
+
+### Adicionando TouchableOpacity
+
+Para adicionar o TouchableOpacity vamos acrescentar a importação no ínicio do código e colocar dentro da View principal.
+
+```js showLineNumbers title="./src/pages/Home.js"
+<View style={styles.container}>
+        <Text style={styles.title}>
+                Para começar como podemos te chamar?
+        </Text>
+        <TextInput
+            style={styles.input}
+            placeholder="Digite o seu nome"
+        />
+        <TouchableOpacity style={styles.buttonAvancar}>
+            <Text style={styles.buttonsText}>Avançar</Text>
+        </TouchableOpacity>
+    </View>
+```
+
+### Estilizando Input e Button
+
+Para finalizar essa etapa vamos estilzar com o seguinte código:
+
+```js showLineNumbers title="./src/pages/Home.js"
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: '#DCDCE5',
+        paddingVertical:70,
+        paddingHorizontal:20,
+    },
+    title:{
+        fontFamily: 'Poppins',
+        fontSize: 18,
+        color: '#2C2C2C',
+        fontWeight: 'bold',
+    },
+    input:{
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        color: '#969CB3',
+        backgroundColor: 'white',
+        textAlign: 'left',
+        paddingHorizontal:20,
+        paddingVertical:18,
+        height: 56,
+        borderRadius: 8,
+        marginTop: 20,
+        marginBottom: 10
+    },
+    buttonAvancar:{
+        alignItems: 'center',
+        borderRadius: 5,
+        backgroundColor: '#37B874',
+        paddingVertical: 18
+    },
+    buttonsText:{
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        color: 'white',
+        fontWeight: 'bold'
+    }
+})
+```
